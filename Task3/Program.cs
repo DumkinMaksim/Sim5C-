@@ -1,6 +1,6 @@
-﻿// a program to search for the sum of array elements with odd indexes
+﻿// A program that looks for the difference between the maximum and minimum array elements. Elements are real numbers
 
-// программа по поиску суммы элементов массива с нечетными индексами
+// Программа которая ищет разницу между максимальным и минимальным элементов массива. Элементы вещественные числа
 
 Double[] CreateRandom(int size,int min, int max)
 {
@@ -10,7 +10,7 @@ Double[] CreateRandom(int size,int min, int max)
        
     return array;
 }
-// поиск максимального и минимальногоэлемента массива для их суммирования
+// поиск максимального и минимальногоэлемента массива для их разницы
 Double FindElements(Double[]myarray)
 {
     double summ=0,maxel=myarray[0],minel=myarray[0];
@@ -26,7 +26,7 @@ Double FindElements(Double[]myarray)
         if (myarray[i]<minel) 
             minel=myarray[i];
     }
-        summ=Math.Round(minel+maxel,3);
+        summ=Math.Round(maxel-minel,3);
             
     return summ;
 }
@@ -42,4 +42,4 @@ Double[] EnterArray=CreateRandom(10,-999,999);
 Print(EnterArray);
 Console.WriteLine();
 //Вывод  суммы элементов с нечетными индексами
-Console.WriteLine("The sum of the max and min elements of the array is equal to-> "+FindElements(EnterArray));
+Console.WriteLine("TThe difference between max and min-> "+FindElements(EnterArray));
